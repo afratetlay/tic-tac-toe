@@ -1,5 +1,6 @@
-const Cell = () => {
-  return <div className="square"></div>;
+const Cell = ({ id, cell }) => {
+  console.log(cell);
+  return <div className="square" id={id}></div>;
 };
 
 export default Cell;
