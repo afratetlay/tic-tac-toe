@@ -21,6 +21,20 @@ const App = () => {
       [0, 4, 8],
       [2, 4, 6],
     ];
+    winningCombos.forEach((array) => {
+      let circleWins = array.every((cell) => cells[cell] === "cirle");
+
+      if (circleWins) {
+        setWinningMessage("Circle Wins!");
+      }
+    });
+    winningCombos.forEach((array) => {
+      let crossWins = array.every((cell) => cells[cell] === "cross");
+
+      if (crossWins) {
+        setWinningMessage("Cross Wins!");
+      }
+    });
   };
 
   useEffect(() => {
@@ -42,7 +56,7 @@ const App = () => {
           />
         ))}
       </div>
-      <p>{message}</p>
+      <p>{winningMessage || message}</p>
     </div>
   );
 };
