@@ -8,6 +8,7 @@ const App = () => {
 
   const message = "it is now " + go + "'s go.";
 
+  console.log(cells);
   return (
     <div className="app">
       <div className="gameboard">
@@ -19,6 +20,7 @@ const App = () => {
             setCells={setCells}
             go={go}
             setGo={setGo}
+            cells={cells}
           />
         ))}
       </div>
